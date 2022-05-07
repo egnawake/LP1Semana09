@@ -1,0 +1,13 @@
+1. A keyword para declarar uma interface é "interface"
+
+2. Os membros de uma interface são public por omissão
+
+3. F (Uma classe que implementa uma interface não tem de fornecer implementações de todos os membros da interface)
+
+4. V (Uma classe que implementa uma interface pode ter membros que não estão definidos na interface)
+
+5. F (Uma classe pode estender mais do que uma classe base)
+
+6. V (Uma classe pode implementar mais do que uma interface)
+
+7. V (Uma struct pode implementar interfaces)
