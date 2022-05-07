@@ -4,7 +4,7 @@ namespace AnimInterf
     {
         public override string Sound()
         {
-            base.Sound() + "Cheep cheep";
+            return base.Sound() + "Cheep cheep";
         }
     }
 }
