@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Polimorfismo
+namespace AnimInterf
 {
     public class Dog : Animal
     {
