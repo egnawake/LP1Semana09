@@ -31,6 +31,10 @@ namespace PlayerManager1
 
                     Console.WriteLine($"Added {name} with {score} points");
                 }
+                else if (op == "list")
+                {
+                    ListPlayers(players);
+                }
                 else if (op == "quit")
                 {
                     Console.WriteLine("Bye!");
@@ -39,6 +43,14 @@ namespace PlayerManager1
                 {
                     Console.WriteLine("Unrecognized command");
                 }
+            }
+        }
+
+        private static void ListPlayers(IEnumerable<Player> players)
+        {
+            foreach (Player p in players)
+            {
+                Console.WriteLine($"{p.Name}, {p.Score} points");
             }
         }
     }
