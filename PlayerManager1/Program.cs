@@ -35,6 +35,15 @@ namespace PlayerManager1
                 {
                     ListPlayers(players);
                 }
+                else if (op == "listscore")
+                {
+                    Console.Write("Enter min score: ");
+                    int score = int.Parse(Console.ReadLine());
+
+                    IEnumerable<Player> list = GetPlayersWithScoreGreaterThan(score, players);
+
+                    ListPlayers(list);
+                }
                 else if (op == "quit")
                 {
                     Console.WriteLine("Bye!");
@@ -44,6 +53,21 @@ namespace PlayerManager1
                     Console.WriteLine("Unrecognized command");
                 }
             }
+        }
+
+        private static IEnumerable<Player> GetPlayersWithScoreGreaterThan(
+            int score,
+            IEnumerable<Player> players)
+        {
+            List<Player> l = new List<Player>();
+            foreach (Player p in players)
+            {
+                if (p.Score > score)
+                {
+                    l.Add(p);
+                }
+            }
+            return l;
         }
 
         private static void ListPlayers(IEnumerable<Player> players)
